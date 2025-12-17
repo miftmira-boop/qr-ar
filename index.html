@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AR QR</title>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <style>
+    body { margin:0; overflow:hidden; }
+  </style>
+</head>
+
+<body>
+  <a-scene embedded vr-mode-ui="enabled: false" loading-screen="enabled: false">
+
+    <!-- Layer belakang -->
+    <a-image src="belakang.png" position="0 0 -12" scale="12 8 1"></a-image>
+
+    <!-- Layer tengah -->
+    <a-image src="tengah.png" position="0 0 -6" scale="8 5 1"></a-image>
+
+    <!-- Layer depan -->
+    <a-image src="depan.png" position="0 0 -2" scale="6 4 1"></a-image>
+
+    <!-- Kamera dengan animation zoom masuk -->
+    <a-camera position="0 0 15"
+      animation="property: position; to: 0 0 0; dur: 6000; easing: easeInOutQuad">
+    </a-camera>
+
+  </a-scene>
+</body>
+</html>
